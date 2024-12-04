@@ -41,7 +41,7 @@ def sync():
     try:
         is_start = data["m2m:sgn"]["nev"]["rep"]["m2m:cin"]["con"]
         print(f"Received new state: {is_start}")
-        state = "start" if is_start == "ON" else "stop"
+        state = "start" if is_start == "On" else "stop"
         update_device_state(state)
 
         return jsonify({"status": "success"}), 200
